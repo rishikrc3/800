@@ -1,0 +1,53 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+string solve(ll n)
+{
+    vector<int>v;
+    map<int,int>m;
+    for(int i =0;i<n;i++)
+    {
+        int x;
+        cin>>x;
+        m[x]++;
+    }
+
+    if(m.size()>=3)
+        return "No";
+
+    if(m.size()==1)
+        return "Yes";
+    // for(auto it:m)
+    // {
+    //     cout<<it.second<<" "; 
+    // }
+    for(auto it:m)
+    {
+        v.push_back(it.second);
+    }
+    //cout<<v[0]<<" "<<v[1]<<endl;
+    int ans = abs(v[0]-v[1]);
+    //cout<<ans;
+    if(abs(ans>=2))
+        return "No";
+
+    return "Yes";
+
+    
+    
+
+}
+int main()
+{
+    ll T;
+    cin>>T;
+
+    while(T--)
+    {
+        ll n;
+        cin>>n;
+
+        string ans = solve(n);
+        cout<<ans<<endl;
+    }
+}
