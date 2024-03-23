@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+string solve(ll n, ll k)
+{
+    bool check =false;
+    vector<ll>v(n);
+    for(int i =0;i<n;i++)
+    {
+        cin>>v[i];
+        if(v[i]==k)
+        {
+            check=true;
+        }
+            
+    }
+    if(check==true)
+        return "YES";
+
+    return "NO";
+}
+int main()
+{
+    ll T;
+    cin>>T;
+    while(T--)
+    {
+        ll n,k;
+        cin>>n>>k;
+        string ans = solve(n,k);
+        cout<<ans<<endl;
+    }
+}
