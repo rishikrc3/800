@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+int solve(ll n)
+{
+    ll sum =0;
+
+    for(int i =1;i<n;i++)
+    {
+        int x;
+        cin>>x;
+        sum+=x;
+    }
+
+    return(-sum);
+
+
+}
+int main()
+{
+    ll T;
+    cin>>T;
+
+    while(T--)
+    {
+        ll n;
+        cin>>n;
+        int ans = solve(n);
+        cout<<ans<<endl;
+    }
+
+}
